@@ -1,43 +1,24 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { recipes } from '@assets'
+import { Home } from '@home'
+import { Route, Routes, Link } from 'react-router-dom'
+import { Result } from '@result'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(recipes.length)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
+    <div>
+      <header className="p-4">
+        <Link to="/">
+          <h1 className="text-3xl font-bold text-center">Nos petits plats</h1>
+          <p className="text-center">Choisissez parmis {count} recettes</p>
+        </Link>
       </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipe/:id" element={<Result />} />
+      </Routes>
     </div>
   )
 }
