@@ -21,7 +21,7 @@ type recipeProps = {
 
 export function Card({ recipe }: recipeProps) {
   return (
-    <Link to={`/recipe/${recipe.id}`} className="rounded-xl block shadow-md">
+    <Link to={`/recipe/${recipe.id}`} className="rounded-xl block shadow-md h-full">
       <div className="h-48">
         <img
           src={`/imgs/recipes/${recipe.poster}`}
@@ -29,9 +29,26 @@ export function Card({ recipe }: recipeProps) {
         />
       </div>
       <div className="p-2 flex justify-between">
-        <div className="md:w-3/4">{recipe.name}</div>
-        <div className="flex items-center gap-1">
+        <div className="md:w-3/4 truncate">{recipe.name}</div>
+        <div className="flex items-center gap-1 font-bold">
           <MdiClockTimeTwoOutline /> {recipe.time} min
+        </div>
+      </div>
+      <div className="p-2 text-xs flex justify-between items-center">
+        <ul className="">
+          {recipe.ingredients.map((item) => (
+            <li>
+              <span className="font-bold">{item.ingredient}</span>
+              {item.quantity
+                ? item.unit
+                  ? ' : ' + item.quantity + ' ' + item.unit
+                  : ' : ' + item.quantity
+                : null}
+            </li>
+          ))}
+        </ul>
+        <div className="w-1/2 text-justify max-h-32 text-ellipsis overflow-hidden p-1">
+          {recipe.description}
         </div>
       </div>
     </Link>
