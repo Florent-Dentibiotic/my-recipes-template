@@ -25,8 +25,8 @@ export function Result() {
               <div className="w-full sm:w-1/2">
                 <h3 className="text-xl font-bold underline">Ingrédients :</h3>
                 <ul className="">
-                  {recipe?.ingredients.map((item) => (
-                    <li>
+                  {recipe?.ingredients.map((item, id) => (
+                    <li key={'ingredient' + id}>
                       <span className="font-bold">{item.ingredient}</span>
                       {item.quantity
                         ? item.unit
@@ -45,7 +45,7 @@ export function Result() {
               </div>
             </div>
             <div className="">
-              <ul className="w-full sm:w-2/3 text-justify list-decimal p-10">
+              <ul className="w-full text-justify list-decimal p-10">
                 {recipe?.description.split('.').map((item, id) => (
                   <li key={id}>{item}.</li>
                 ))}

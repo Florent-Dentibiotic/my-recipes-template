@@ -39,7 +39,7 @@ export function Home() {
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 p-8">
         {results.map((recipe, id) => (
-          <div key={id}>
+          <div key={'recipe' + id}>
             <Card recipe={recipe} />
           </div>
         ))}

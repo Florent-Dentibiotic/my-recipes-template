@@ -36,8 +36,8 @@ export function Card({ recipe }: recipeProps) {
       </div>
       <div className="p-2 text-xs flex justify-between items-center">
         <ul className="">
-          {recipe.ingredients.map((item) => (
-            <li>
+          {recipe.ingredients.map((item, id) => (
+            <li key={'ingredient' + id}>
               <span className="font-bold">{item.ingredient}</span>
               {item.quantity
                 ? item.unit

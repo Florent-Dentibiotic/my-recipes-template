@@ -1,5 +1,79 @@
 export const recipes = [
   {
+    id: 0,
+    name: 'Gâteau aux carottes et à la cannelle',
+    servings: 1,
+    poster: 'belle-part-carrot-cake.jpg',
+    ingredients: [
+      {
+        ingredient: 'Oeuf',
+        quantity: 3,
+      },
+      {
+        ingredient: 'Farine',
+        quantity: 175,
+        unit: 'grammes',
+      },
+      {
+        ingredient: 'sel',
+        quantity: 0.5,
+        unit: 'cuillères à café',
+      },
+      {
+        ingredient: 'Sucre',
+        quantity: 340,
+        unit: 'grammes',
+      },
+      {
+        ingredient: 'Philadelphia cream cheese (ou St Môret)',
+        quantity: 100,
+        unit: 'grammes',
+      },
+      {
+        ingredient: 'Levure chimique',
+        quantity: 1,
+        unit: 'sachet',
+      },
+      {
+        ingredient: 'Sucre glace',
+        quantity: 1,
+        unit: 'cuillère à soupe',
+      },
+      {
+        ingredient: 'Noix',
+        quantity: 150,
+        unit: 'grammes',
+      },
+      {
+        ingredient: 'Carotte',
+        quantity: 200,
+        unit: 'grammes',
+      },
+      {
+        ingredient: 'Huile neutre',
+        quantity: 10,
+        unit: 'cl',
+      },
+      {
+        ingredient: 'Cannelle',
+        quantity: 1,
+        unit: 'cuillère à café',
+      },
+      {
+        ingredient: 'Muscade',
+        quantity: 0.5,
+        unit: 'cuillère à café',
+      },
+      {
+        ingredient: 'Pâte d’amande orange et verte (pour la déco, optionnel)',
+      },
+    ],
+    time: 80,
+    description: `Préchauffer le four à 180°c (th 6). Eplucher puis hacher grossièrement les carottes (le meilleur selon moi) ou les passer dans un mixer, comme ceci :.Mélanger la levure, la farine, le sel et les différentes épices. Casser grossièrement les noix. Battre les 3 oeufs et le sucre semoule dans un saladier. Faire mousser le mélange. Rajouter 2 cuillerées à soupe d’eau chaude. Ajouter l’huile. En plusieurs fois, incorporer la farine mélangée avec les épices, les noix et les carottes. Beurrer un moule. Verser la préparation dans le moule. Faire cuire pendant 55 minutes (il faut que le gâteau soit sec). Recette pour le glaçage du carrot cake :. Foutter le cream cheese avec le sucre glace. Tapissez le dessus du carrot cake avec le glaçage (faites attention à ce que le carrot cake ne soit plus chaud)`,
+    appliance: 'Blender',
+    ustensils: ['cuillère à Soupe', 'verres', 'presse citron'],
+  },
+  {
     id: 1,
     name: 'Limonade de Coco',
     servings: 1,
